@@ -7,6 +7,8 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.junit.runner.JUnitCore;
+
 import com.mycompany.user.User;
 
 public class UserDao {
@@ -77,5 +79,6 @@ public class UserDao {
 
 		return this.user;
 	}
+	
 
 }

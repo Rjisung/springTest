@@ -3,16 +3,18 @@ package com.mycompany.service;
 import java.sql.SQLException;
 
 import org.junit.Test;
+import org.junit.runner.JUnitCore;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.mycompany.DAO.DaoFactory;
 import com.mycompany.DAO.UserDao;
 import com.mycompany.user.User;
+
 import static org.hamcrest.CoreMatchers.*;  // is, notNullValue등 사용 가능
 import static org.junit.Assert.*;   // assertThat, fail 등 사용 가능
 
-public class UserDaoTest {
+public class UserDaoTest{
 	
 	/*public static void main(String[] args) throws ClassNotFoundException,SQLException{
 		
@@ -57,8 +59,13 @@ public class UserDaoTest {
 		dao.add(user);
 		
 		User user2= dao.get(user.getId());
-		
+		//변경
 		assertThat(user2.getName(),is(user.getName()));
 		assertThat(user2.getPassword(),is(user.getPassword()));
+		
 	}
+	
+	public static void main(String[] args) {
+		JUnitCore.main("com.mycompany.service");		
+}
 }
