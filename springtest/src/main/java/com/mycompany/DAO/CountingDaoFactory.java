@@ -19,6 +19,7 @@ public class CountingDaoFactory {
 	@Bean
 	public ConnectionMaker realConnectionMaker() {
 		// TODO Auto-generated method stub
+		
 		return new DConnectionMaker();
 	}
 	
